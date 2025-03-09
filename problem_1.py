@@ -18,6 +18,7 @@ def addTwoNumbers(l1, l2):
     l=[]
     c=0
     for i in range(n):
+        print(c)
         l3.append(l1[i]+l2[i])
         x= l3[-1]
         if x >= 10:
@@ -31,12 +32,14 @@ def addTwoNumbers(l1, l2):
         else:
             y=int(l1[i]+l2[i]+c)
             if y >=10:
-                c=y/10
+                a=y/10
                 y=y%10
                 y=int(y)
                 l.append(int(y))
                 if c>0:
                     c=c-1
+                c=c+a
+
             else:
                 y=int(y)
                 l.append(int(y))
@@ -67,3 +70,9 @@ def addTwoNumbers(l1, l2):
 
 
 addTwoNumbers([9,9,9,7], [5,6,0,3])
+
+
+'''
+so the output is [4,6,0,1,1] reverse addition of [9,9,9,7] and [5,6,0,3]
+7999+3065=11064
+'''
